@@ -1,0 +1,23 @@
+section.product-tabs
+	.container
+		.tabs
+			ul.tabs-list
+				+tabsLink('tab-characteristics', 'Характеристики')(class="active")
+				+tabsLink('tab-about', 'О бренде')
+				+tabsLink('tab-reviews', 'Отзывы')
+				+tabsLink('tab-faq', 'Вопрос-ответ')
+				+tabsLink('tab-video', 'Видео')
+				+tabsLink('tab-articles', 'Статьи')
+			.tabs-content
+				.tab-content__item.tab-characteristics.active
+					table.product-characteristics
+						+charLine('Вид упаковки', 'подарочная')
+						+charLine('Материал', 'хрустаьльное стекло')
+						+charLine('Объем', '310 мл')
+						+charLine('Предметов в наборе', '2 штукки')
+						+charLine('Торговая марка', 'SCHOTT ZWIESEL (Германия)')
+				.tab-content__item.tab-about
+				.tab-content__item.tab-reviews
+				.tab-content__item.tab-faq
+				.tab-content__item.tab-video
+				.tab-content__item.tab-articles

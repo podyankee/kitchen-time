@@ -1,0 +1,35 @@
+.recommended
+    .slick-active
+        .recommended-slider__dot
+            background-color: $black-color
+.recommended-slider__dot
+    display: block
+    +size(17px)
+    border: 2px solid $black-color
+    border-radius: 50%
+    cursor: pointer
+.recommended-slider__nav
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 40px 0 0
+    text-align: center
+    .slick-dots
+        margin: 0 20px
+        order: 2
+        li
+            display: inline-block
+            margin: 0 5px
+.recommended-slider__controls--next
+     order: 3
+.recommended-slider__controls--prev
+    order: 1
+.recommended-slider__controls
+    position: relative
+    background-color: $black-color
+    +size(45px)
+    cursor: pointer
+    .icon
+        +absolute-center()
+        +size(21px, 12px)
+        fill: #fff

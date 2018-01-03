@@ -1,0 +1,76 @@
+html
+  height: 100%
+  font-size: 16px
+
+body
+  height: 100%
+  margin: 0
+  font-family: $regular-font
+  line-height: 1.2
+  -webkit-font-smoothing: antialiased
+
+section
+  position: relative
+  padding: 60px 0
+
+.g-section-title
+  text-align: center
+  font-family: $bold-font
+  margin-bottom: 40px
+
+.wrapper
+  min-height: 100%
+  position: relative
+  overflow: hidden
+
+ul
+  padding: 0
+  margin: 0
+  list-style: none
+
+p
+  margin: 0
+
+h1, h2, h3, h4, h5
+  margin-top: 0
+  margin-bottom: 0
+  font-weight: normal
+
+*
+  box-sizing: border-box
+a
+  color: #000
+  text-decoration: none
+.container
+  +wrapper
+.g-btn
+  cursor: pointer
+  border: 0
+  text-align: center
+  &.g-btn--black
+    background-color: $black-color
+    border: 2px solid $black-color
+    color: #fff
+    text-decoration: none
+  &.g-btn--border-black
+    border: 2px solid $black-color
+.g-section-title--white
+  color: #fff
+.g-section-title__product
+  margin-bottom: 20px
+  text-align: left
+.content-center
+  text-align: center
+.g-input
+  height: 50px
+  line-height: 50px
+  padding: 0 15px
+  background-color: transparent
+  border: 1px solid #fff
+  color: #fff
+.g-label
+  color: #fff
+.product-buttons
+  display: flex
+  justify-content: space-between
+  align-items: center

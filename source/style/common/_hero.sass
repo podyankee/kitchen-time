@@ -1,0 +1,81 @@
+.header
+    background-color: #000
+    .main-nav
+        border-top: 1px solid $menu-border-color
+.index-page
+    .header
+        background-color: transparent
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        z-index: 2
+
+.icon-logo
+    fill: #fff 
+.header-nav__item
+    margin-bottom: 10px
+    &:last-child
+        margin-bottom: 0
+    a
+        color: #fff
+        +rem(15px)
+        border-bottom: 1px solid $gray-color
+        &.header-phone
+            +rem(20px)
+            border-bottom: 0
+    .icon
+        fill: #fff
+        +size(17px)
+        margin-right: 10px
+.header-top
+    .container
+        +row-flex
+        +align-items(flex-end)
+        +wrapper
+        margin-bottom: 20px
+    &-logo
+        +col-float
+    &-nav__list
+        +col-float
+.header-logo
+    margin-right: 60px
+
+.header-nav
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    padding-bottom: 30px
+    flex: 1
+
+.icon-logo
+    +size(240px, 130px)
+.header-nav__user
+    display: flex
+    .icon
+        fill: #fff
+        +size(30px)
+        margin-bottom: 10px
+.header-nav__user--item
+    text-align: center
+    margin-left: 25px
+    &:first-child
+        margin-left: 45px
+.header-nav__link--user
+    color: #fff
+    display: block
+.header-nav__user--icon
+    position: relative
+.header-nav__user--count
+    background-color: $red-color
+    color: #fff
+    +rem(12px)
+    text-align: center
+    line-height: 23px
+    display: block
+    +size(25px)
+    border-radius: 50%
+    position: absolute
+    top: -10px
+    right: -5px
+
