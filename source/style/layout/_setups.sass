@@ -13,6 +13,10 @@ section
   position: relative
   padding: 60px 0
 
+.row
+  +row-flex
+  +align-items(flex-end)
+
 .g-section-title
   text-align: center
   font-family: $bold-font
@@ -44,9 +48,17 @@ a
 .container
   +wrapper
 .g-btn
-  cursor: pointer
   border: 0
   text-align: center
+  display: inline-block
+  height: 50px
+  line-height: 50px
+  padding: 0 20px
+  background-color: #fff
+  text-transform: uppercase
+  text-decoration: underline
+  position: relative
+  z-index: 2
   &.g-btn--black
     background-color: $black-color
     border: 2px solid $black-color
@@ -74,3 +86,15 @@ a
   display: flex
   justify-content: space-between
   align-items: center
+.header-nav
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  padding-bottom: 30px
+  flex: 1
+.header-nav__user--item
+  text-align: center
+  margin-left: 25px
+  margin-bottom: 0
+  &:first-child
+      margin-left: 45px

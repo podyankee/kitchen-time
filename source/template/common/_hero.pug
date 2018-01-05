@@ -1,1 +1,35 @@
-h1 Hello
+header.header
+    .header-top
+        .container
+            .row
+                .logo.header-logo
+                    +icon('kitchentime_logo')
+                .header-nav
+                    ul.header-nav__list
+                        li.header-nav__item
+                            a.header__phone.header-nav__link(href="tel:08001234567") 0 800 123 45 67
+                        li.header-nav__item
+                            a.header-nav__link(href="#") Обратный звонок
+                        li.header-nav__item
+                            a.header-nav__link(href="") Адреса салонов
+                    ul.header-nav__list
+                        each object in nav.headerNavInfo
+                            li.header-nav__item
+                                +icon(object['icon'])
+                                a.header-nav__link(href=object['link'])= object['title']
+                    ul.header-nav__list
+                        each object in nav.headerNavConnect
+                            li.header-nav__item
+                                +icon(object['icon'])
+                                a.header-nav__link(href=object['link'])= object['title']
+                    ul.header-nav__user
+                        each object in nav.headerNavUser
+                            li.header-nav__user--item
+                                .header-nav__user-icon
+                                    +icon(object['icon'])
+                                    span.header-nav__user-count= object['number']
+                                a.header-nav__link.header-nav__link--user(href=object['link'])= object['title']
+    .header-bottom
+        .container
+            .row
+                include _menu

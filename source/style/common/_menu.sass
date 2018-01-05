@@ -1,0 +1,23 @@
+.header-bottom
+    .row
+        display: flex
+        align-items: center
+    .container
+        margin-bottom: 0
+.main-nav
+    &__list
+        display: flex
+        justify-content: space-between
+    &__item
+        &:not(:last-child)
+            margin-right: 30px
+    &__link
+        +rem(15px)
+        font-family: $bold-font
+        color: #fff
+        text-transform: uppercase
+.header-search
+    margin-left: auto
+    .icon-search
+        fill: #fff
+        +dem(25px)
