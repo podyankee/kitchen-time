@@ -1,0 +1,103 @@
+.pic-menu
+    padding-top: 0
+    margin-top: -80px
+.pic-menu__line
+    +row-flex
+.pic-menu__50
+    +col
+    +size(6)
+    &--big
+        +size(12) 
+.pic-menu__25
+    +col
+    +size(6)
+   
+.pic-menu__item
+    +dem(100%, 280px)
+    background-size: cover
+    background-position: center
+    margin-bottom: 10px
+    position: relative
+    &--big
+        +col
+        +size(6)
+        height: auto
+        position: relative
+        padding: 35px
+        &:before
+            content: ''
+            position: absolute
+            top: -30px
+            right: 0
+            bottom: 40px
+            width: 60%
+            background-size: cover
+            background-repeat: no-repeat
+            display: block
+            background: url(../img/pic-menu/man.png)
+.pic-menu-review__bottom
+    position: absolute
+    right: 0
+    left: 0
+    bottom: 0
+    height: 105px
+    padding: 0 20px
+    background-color: rgba(#000, 0.7)
+    display: flex
+    align-items: center
+.pic-menu__nav
+    position: absolute
+    right: 0
+    left: 0
+    bottom: 0
+    height: 105px
+    padding: 15px 20px
+    background-color: rgba(#000, 0.7)
+    a
+        color: #fff
+        border-bottom: 1px solid $gray-color
+        font-size: 0.8rem
+
+
+.pic-menu__title
+    text-transform: uppercase
+    color: #fff
+    display: inline-block
+    margin-bottom: 10px
+.pic-menu-list__item
+    margin-right: 10px
+    margin-bottom: 10px
+    &:last-child
+        margin-bottom: 0
+    .next
+        color: $accent-color
+        border-bottom-color: $accent-color
+    
+.pic-menu-list
+    display: flex
+    flex-wrap: wrap
+
+.pic-menu-review__content
+    color: #fff
+    width: 100%
+    max-width: 230px
+.pic-menu-review__title
+    display: block
+    margin-bottom: 15px
+    +rem(28px)
+    line-height: 1.3
+.pic-menu-review__text
+    line-height: 1.2
+    &:after
+        content: ''
+        display: block
+        +dem(20px, 2px)
+        margin: 25px 0 30px
+        background-color: #fff
+.pic-menu-review__author
+    text-transform: uppercase
+    display: block
+    margin-bottom: 10px
+.pic-menu-review__author-work
+    color: $accent-color
+
