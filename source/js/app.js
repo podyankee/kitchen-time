@@ -8,6 +8,18 @@ $(document).ready(function(){
             return '<a class="index-slider__dots"></a>';
         }
     });
+
+    $('.js-recommended-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '.recommended-slider__controls--prev',
+        nextArrow: '.recommended-slider__controls--next',
+        dots: true,
+        appendDots: '.recommended-slider__dots',
+        customPaging: function () {
+            return '<a class="recommended-slider__dot"></a>';
+        }
+    });
     function indexSliderElemPos(elem, pos) {
         var windowWidth = $(window).width(),
             containerWidth = $('.container').width(),
