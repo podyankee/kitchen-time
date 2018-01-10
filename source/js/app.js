@@ -34,5 +34,20 @@ $(document).ready(function(){
 
 
     });
+
+// Video
+
+    $('.video-start').click(function () {
+        var videoId = $(this).parent().attr('data-video-id'),
+            videoPlayer = $(this).parent().attr('id');
+        player = new YT.Player(videoPlayer, {
+            "autoplay": 1,
+            videoId: videoId
+
+
+        });
+    });
+
+
     });
     
