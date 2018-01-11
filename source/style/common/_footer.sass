@@ -1,0 +1,103 @@
+.footer
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../img/general/footer_bg.jpg') center no-repeat
+    background-size: cover
+    text-align: center
+    padding: 60px 0
+    .main-nav
+        margin-bottom: 30px
+.footer-content
+    +row-flex
+    padding-top: 25px
+    border-top: 1px solid $gray-color
+    text-align: left
+    color: #fff
+    a
+        color: #fff
+.footer-copyright, .footer__payment-type, .footer-nav, .footer-contacts
+    +col
+.footer-contacts
+    +size(4)
+.footer-copyright, .footer__payment-type
+    +size(2)
+.footer-nav
+    +size(3)
+
+.footer__payment-type
+    max-wi\dth: 170px
+
+.social-list
+    display: flex
+.social-list__item
+    +dem(35px)
+    border: 2px solid #fff
+    margin-left: -2px
+    &:first-child
+        margin-left: 0
+.social-list__link
+    position: relative
+    display: block
+    +dem(100%)
+    .icon
+        +absolute-center
+        +dem(15px)
+        fill: #fff
+.copyright
+    display: block
+    margin-bottom: 15px
+    color: #fff
+.footer__social-list
+    margin-bottom: 35px
+.footer-rules__link
+    color: #fff
+    border-bottom: 1px solid $gray-color
+
+.payment-type__title
+    display: block
+    margin-bottom: 15px
+    +rem(15px)
+
+.payment-type__list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+.payment-type__item
+    width: 48%
+    .icon
+        +dem(75px, 35px)
+        fill: #fff
+
+.footer-nav
+    display: flex
+    justify-content: space-between
+    flex-shrink: 0
+.footer-nav__list
+    width: 49%
+.footer-nav__item
+    margin-bottom: 10px
+    &:last-child
+        margin-bottom: 0
+.footer-nav__link
+    display: inline-block
+    border-bottom: 1px solid $gray-color
+    +rem(15px)
+    white-space: nowrap
+
+.footer-contacts__line
+    margin-bottom: 30px
+.footer-subscribe-form__line
+    display: flex
+    justify-content: space-between
+    .g-input
+        margin-right: 10px
+.footer-subscribe-form
+    .g-label
+        margin-bottom: 5px
+        display: block
+.footer__feedback
+    +rem(15px)
+    border-bottom: 1px solid $gray-color
+.footer-contacts
+    margin-right: 0
+    margin-left: auto
+
+        

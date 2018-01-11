@@ -1,0 +1,51 @@
+include _mixins
+footer.footer
+    .container
+        .row
+            include _menu
+        .footer-content
+            .footer-copyright
+                span.copyright &copy; 2017, Kitchentime.uk
+                ul.social-list.footer__social-list
+                    li.social-list__item
+                        a(href="#").social-list__link
+                            +icon('fb')
+                    li.social-list__item
+                        a(href="#").social-list__link
+                            +icon('vk')
+                    li.social-list__item
+                        a(href="#").social-list__link
+                            +icon('instagram')
+                    li.social-list__item
+                        a(href="#").social-list__link
+                            +icon('tw')
+                a(href="#").footer-rules__link Правила сайта
+            .payment-type.footer__payment-type
+                span.payment-type__title Мы ринимаем
+                ul.payment-type__list
+                    +paymentType('yandex')
+                    +paymentType('webmoney')
+                    +paymentType('sberbank')
+                    +paymentType('qiwi')
+            .footer-nav
+                ul.footer-nav__list
+                    +footerNavLink('Как заказать')
+                    +footerNavLink('Оплата')
+                    +footerNavLink('Доставка')
+                    +footerNavLink('Статьи')
+                    +footerNavLink('Видообзоры')
+                ul.footer-nav__list
+                    +footerNavLink('Бренды')
+                    +footerNavLink('Возврат товара')
+                    +footerNavLink('Новости магазина')
+                    +footerNavLink('О магазине')
+                    +footerNavLink('Контакты')
+            .footer-contacts
+                .footer-contacts__line
+                    a(href="#").footer__phone 8 800 123-45-67
+                    a(href="#").footer__feedback Обратный звонок
+                form.footer-subscribe-form
+                    label.g-label Подпишитесь на новинки, акции и новости
+                    .footer-subscribe-form__line
+                        input(type="email" name="email").g-input.g-input__email#footer-subscribe-email
+                        input(type="submit" value="Подписаться").g-btn.g-btn-no-under
