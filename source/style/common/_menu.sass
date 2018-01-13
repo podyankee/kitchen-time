@@ -7,15 +7,16 @@
 .main-nav
     &__list
         display: flex
-        justify-content: space-between
-    &__item
-        &:not(:last-child)
-            margin-right: 30px
     &__link
         +rem(15px)
         font-family: $bold-font
         color: #fff
         text-transform: uppercase
+        display: block
+        padding: 20px 10px
+        transition: all linear 0.2s
+        &:hover
+            background-color: $menu-bghover-color
 .header-search
     margin-left: auto
     .icon-search

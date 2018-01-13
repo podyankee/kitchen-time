@@ -24,3 +24,13 @@ mixin paymentType(icon)
 mixin footerNavLink(title)
     li.footer-nav__item
         a(href="#").footer-nav__link= title
+
+mixin productLineInfo(key,val)
+    .product-line-info
+        span.product-prev__key= key
+        span.product-prev__val= val
+
+mixin shareLine(icon,link, title)
+    .share-line
+        +icon(icon)
+        a(href= link)= title

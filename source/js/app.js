@@ -48,6 +48,29 @@ $(document).ready(function(){
         });
     });
 
+//Gallery slider
+$('.js-product-gallery').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: ".js-product-gallery-nav",
+    prevArrow: '.product-gallery-controls--prev',
+    nextArrow: '.product-gallery-controls--next'
+    
+});
+
+//Gallery slider navigation
+$('.js-product-gallery-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+    asNavFor: ".js-product-gallery"
+    
+});
+
+
+
 
     });
     

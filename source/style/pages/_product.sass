@@ -1,92 +1,99 @@
-.product-content
-    display: flex
-    justify-content: space-between
-.product-gallery, 
-.product-info
-    width: 48%
-    flex-shrink: 0
-.product-fast-info
-    display: flex
-    justify-content: space-between
-    margin-bottom: 25px
+.product-line, .product-fast-info
+    +row-flex
+.product-gallery, .product-info
+    +col
+    +size(6)
 .product-specification
-    width: 60%
-    display: flex
-    flex-direction: column
+    +col
+    +size(7)
 .product-callback
-    width: 35%
+    +col
+    +size(5)
+.g-section-title--product
+    text-align: left
+.product-fast-info, .product-price-info
+    .icon
+        +dem(20px)
+        margin-right: 10px
+        &:last-child
+            margin-right: 0
+.product-fast-info
+    margin-bottom: 25px
+
+.product-callback
     position: relative
     padding-left: 30px
     .icon
-        +size(20px)
         position: absolute
         top: 0
         left: 0
-.product-callback__phone,
-.product-callback__link
+.product-callback__phone, .product-callback__link
     display: inline-block
     margin-bottom: 10px
 .product-callback__link
-    border-bottom: 1px dotted $gray-color
+    border-bottom: 1px solid $menu-border-color
 .product-callback__text
-    font-size: rem(15)
+    +rem(15px)
     line-height: 1.3
+.product-specification
+    display: flex
+    flex-direction: column
 .product-specification-list
     display: flex
     margin-top: auto
-    &__item
-        margin-right: 5px
-        &:last-child
-            margin-right: 0
-    .icon
-        +size(17px)
 .product-price-info
     display: flex
     justify-content: space-between
     align-items: flex-end
     margin-bottom: 25px
-
-.product-feedback
-    width: 35%
-    .icon
-        +size(17px)
-        margin-right: 10px
 .product-price
     font-family: $bold-font
-    font-size: rem(32)
-.product-buttons
-    margin-bottom: 25px
-    .g-btn
-        width: 48%
+    +rem(32px)
+.product-feedback
+    width: 40%
+
 .product-actions
     display: flex
     align-items: center
     margin-bottom: 30px
+    .icon
+        +dem(20px)
+        margin-right: 10px
 .product-action
     margin-right: 20px
     &:last-child
         margin-right: 0
-    .icon
-        +size(17px)
-        margin-right: 10px
-        vertical-align: middle
-    a
-        border-bottom: 1px dotted $menu-border-color
-.product-line
+.share
+    position: relative
+.share
+    &:hover
+        .share-popup
+            display: block
+.share-popup
+   display: none
+   position: absolute
+   padding: 25px
+   background-color: #fff
+   box-shadow: 4px 0 16px 0 rgba(#000, 0.12)
+.share-line
     display: flex
-    justify-content: space-between
-.product-delivery,
-.product-guarantee
-    width: 48%
+    margin-bottom: 15px
+    &:last-child
+        margin-bottom: 0
+    a
+        white-space: nowrap
+
+.product-line
+    +row-flex
+    .icon
+        +dem(30px)
+        margin-right: 10px
+.product-delivery, .product-guarantee
+    +col
+    +size(6)
 .product-title-icon
     margin-bottom: 15px
-    .icon
-        margin-right: 10px
-        vertical-align: middle
-    .icon-delivery
-        +size(34px, 27px)
-    .icon-guarantee
-        +size(27px)
+
 .product-delivery__info
     background-color: $light-gray-color
     padding: 15px
@@ -99,58 +106,42 @@
     margin-bottom: 10px
 .product-delivery-variants__item
     position: relative
-    display: block
-    line-height: 1
+    padding-left: 10px
     &:before
         content: ''
         display: block
-        position: absolute
-        top: 2px
-        left: -7px
-        +size(5px)
+        +abs-pos(2px, auto, auto, 0)
+        +dem(5px)
         background-color: $black-color
-.product-gallery-nav__item
-    cursor: pointer
-    &:focus
-        outline: none
-    img
-        +size(100px)
-        &:focus
-            outline: none
-.product-gallery-main
+.product-delivery-variants__val
+    display: block
+    margin-top: 5px
+    color: $accent-color
+
+.product-gallery__main
     position: relative
-.product-gallery__controls
+.product-gallery-controls
     position: absolute
+    z-index: 1
     top: 50%
     transform: translateY(-50%)
-    background-color: $light-gray-color
-    +size(45px)
-    z-index: 1
+    background: $light-gray-color
+    +dem(45px)
     cursor: pointer
     .icon
         +absolute-center
-        +size(11px, 17px)
-.product-gallery__controls.product-gallery__controls--prev
+        +dem(11px, 17px)
+    
+.product-gallery-nav__item
+    cursor: pointer
+    img
+        +dem(100px)
+.product-gallery-controls--prev
     left: 0
-.product-gallery__controls.product-gallery__controls--next
+.product-gallery-controls--next
     right: 0
-.share
-    position: relative
-    &:hover
-        .share-popup
-            display: block
-.share-popup
-    display: none
-    padding: 25px
-    background-color: #fff
-    box-shadow: 4px 0 16px 0 rgba(#000, 0.12)
-    position: absolute
-.share-line
-    display: flex
-    margin-bottom: 15px
-    &:last-child
-        margin-bottom: 0
-    a
-        white-space: nowrap
 
-
+.product-gallery-nav__item:focus 
+    outline: 0
+    img
+        border: 1px solid $menu-border-color

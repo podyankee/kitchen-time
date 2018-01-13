@@ -1,0 +1,94 @@
+section.product
+    .container
+        .product-line
+            .product-gallery
+                .product-gallery-main
+                    .product-gallery-controls.product-gallery-controls--prev
+                        +icon('arrow-left')
+                    .product-gallery-controls.product-gallery-controls--next
+                        +icon('arrow-right')
+                    .js-product-gallery
+                        .product-gallery__item
+                            img(src="assets/img/products/product1/gallery1.jpg", alt="")
+                        .product-gallery__item
+                            img(src="assets/img/products/product1/gallery1.jpg", alt="")
+                        .product-gallery__item
+                            img(src="assets/img/products/product1/gallery1.jpg", alt="")
+                .product-gallery-nav
+                    .js-product-gallery-nav
+                        .product-gallery-nav__item
+                            img(src="assets/img/products/product1/gallery-prev2.jpg", alt="")
+                        .product-gallery-nav__item
+                            img(src="assets/img/products/product1/gallery-prev3.jpg", alt="")
+                        .product-gallery-nav__item
+                            img(src="assets/img/products/product1/gallery1.jpg", alt="")
+            .product-info
+                h2.g-section-title.g-section-title--product Набор бокалов для красного вина, серия Frau, SHOFT ZWIESEL
+                .product-fast-info
+                    .product-specification
+                        +productLineInfo('Артикул', '111-058-2')
+                        +productLineInfo('Торговая марка', 'SHOFT ZWIESEL (Германия)')
+                        +productLineInfo('Серия', 'Серия Frau')
+                        ul.product-specification-list
+                            li.product-specification-list__item
+                                +icon('idea')
+                            li.product-specification-list__item
+                                +icon('idea')
+                            li.product-specification-list__item
+                                +icon('idea')
+                            li.product-specification-list__item
+                                +icon('idea')
+                            li.product-specification-list__item
+                                +icon('idea')
+                            li.product-specification-list__item
+                                +icon('idea')
+                    .product-callback
+                        +icon('phone')
+                        a(href="tel:88001234567").product-callback__phone 8 800 123-45-56
+                        a(href="#").product-callback__link Обратный звонок
+                        span.product-callback__text Позвоните и наши консультанты помогут сделать выбор
+                .product-price-info
+                    span.product-price 635 &#8372;
+                    .product-price__availability
+                        +icon('check')
+                        span Есть в наличии
+                    .product-feedback
+                        +icon('mail')
+                        a(href="#") Обратная связь
+                .product-buttons
+                    a(href="#").g-btn.g-btn__black  Добавить в корзину   
+                    a(href="#").g-btn.g-btn--border-black   Купить в один клик
+                .product-actions
+                    .product-action.product-action--favorite
+                        +icon('heart')
+                        a(href="#") В избранное
+                    .product-action.product-action--compare
+                        +icon('scales')
+                        a(href="#") Сравнить
+                    .product-action.share
+                        +icon('share')
+                        a(href="#") Поделиться
+                        .share-popup
+                            +shareLine('chain', '#', 'Скопировать ссылку')
+                            +shareLine('mail', '#', 'Отправить ссылку на почту')
+                            +shareLine('printer', '#', 'Версия для печати')
+                            +shareLine('share', '#', 'Поделиться с друзьями')
+                .product-line
+                    .product-delivery
+                        .product-title-icon
+                            +icon('delivery')
+                            span Доставка
+                        .product-delivery__info
+                            span По Лондону и ареа возможна
+                            span.product-delivery__date#delivery-date 11.11.2017
+                        .product-delivery__city
+                            span  Ваш город: Лондон
+                        ul.product-delivery-variants
+                            li.product-delivery-variants__item 
+                                span.product-delivery-variants__key EMS Nova Poshta
+                                span.product-delivery-variants__val (500 a, 5 дней)
+                    .product-guarantee
+                        .product-title-icon
+                            +icon('guarantee')
+                            span Гарантия
+                        .product-guarantee__text На этот товар в нашем магазине предоставляется гарантия сроком на 1(один) год.

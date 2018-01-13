@@ -2,12 +2,12 @@
     "headerNavInfo": {
         "howOrder" : {
             "title": "Как заказать",
-            "link": "#", 
+            "link": "product.html", 
             "icon": "basket"
         },
         "payment" : {
             "title": "Оплата",
-            "link": "#", 
+            "link": "index.html", 
             "icon": "wallet"
         },
         "delivery" : {
