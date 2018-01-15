@@ -1,0 +1,76 @@
+.review-stars
+    display: flex
+.review-star
+    margin: 0 5px
+    .icon
+        +dem(23px)
+        fill: transparent
+        stroke: $rating-color
+    &.active
+        .icon
+            fill: $rating-color
+.review-stars--set
+    .review-star
+        cursor: pointer
+.your-review, .review-middle__line
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+.review-mini-title
+    font-family: $bold-font
+    margin-right: 15px
+.product-review__line
+    display: flex
+    background-color: $light-gray-color
+    padding: 25px 30px
+.add-review
+    margin-right: 30px
+    .g-btn
+        width: 100%
+        font-family: $bold-font
+.review-mark
+    margin-left: 10px
+.review
+    padding: 40px 0 40px 90px
+    position: relative
+    border-bottom: 1px solid $light-gray-color
+    &:last-child
+        border-bottom: 0
+        padding-bottom: 0
+.review-photo
+    position: absolute
+    top: 40px
+    left: 0
+    +dem(60px)
+    span
+        display: none
+        +absolute-center
+        +rem(15px)
+        color: $accent-color
+    &.review-photo--no
+        border: 1px solid $light-gray-color
+        span
+            display: block
+            text-align: center
+.review-content__top
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-bottom: 25px
+.review-author
+    margin-right : auto
+    font-family: $bold-font
+.review-date
+    margin-left: 30px
+    color: $accent-color
+.review-text-block
+    display: flex
+.review-text-block
+    margin-bottom: 30px
+.review-comment__title
+    +rem(15px)
+    color: $accent-color
+    width: 120px
+    flex-shrink: 0
+.review-text
+    line-height: 1.3

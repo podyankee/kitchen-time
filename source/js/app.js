@@ -75,7 +75,6 @@ $('.tabs-list__item').click(function () {
     var tabName = $(this).attr('show-tab');
     $(this).addClass('active').siblings().removeClass('active');
     $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
-    console.log('.tabs-content .' + tabName);
 });
 
 
@@ -88,6 +87,47 @@ $(document).on('click', '.faq__title', function () {
       faqContent.slideDown();
   }
 });
+
+//Review stars function
+
+function rating(elem) {
+    var ratingLine = $('.review-stars--set .review-star');
+    ratingLine.removeClass('active');
+    elem.addClass('active');
+
+    for(var i = 0, rLen = ratingLine.length; i < rLen; i++) {
+        if ($(ratingLine[i]).hasClass('active')) {
+            break;
+        }
+        $(ratingLine[i]).addClass('active');
+    }
+}
+
+
+
+$('.review-stars--set .review-star').click(function () {
+    var cur = $(this),
+        ratingLine = $('.review-stars--set .review-star');
+    ratingLine.removeClass('click-active');
+    rating(cur);
+    cur.addClass('click-active');
+});
+
+    $('.review-stars--set .review-star').mouseover(function () {
+        var cur = $(this);
+        rating(cur);
+        cur.addClass('active');
+    })
+        .mouseout(function () {
+            var ratingLine = $('.review-stars--set .review-star');
+            ratingLine.addClass('active');
+            for (var i = 5; i > 0; i--) {
+                if ($(ratingLine[i]).hasClass('click-active')) {
+                    break;
+                }
+                $(ratingLine[i]).removeClass('active');
+            }
+        });
 
     });
     
