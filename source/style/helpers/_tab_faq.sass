@@ -1,0 +1,36 @@
+.faq-item
+    margin-bottom: 25px
+    &:last-child
+        margin-bottom: 0
+    &.active
+        .faq__title
+            &:after
+                border-width: 0 5px 5px 5px   
+                border-color: transparent transparent #000 transparent 
+.faq__title
+    position: relative
+    display: inline-block
+    margin-bottom: 15px
+    border-bottom: 1px solid $gray-color
+    cursor: pointer
+    line-height: 1.3
+    &:after
+        content: ''
+        position: absolute
+        top: 50%
+        right: -20px
+        +dem(0)
+        margin-top: -2.5px
+        border-style: solid
+        border-width: 5px 5px 0 5px   
+        border-color: #000 transparent transparent transparent
+    
+.faq__content
+    padding: 30px
+    background-color: $light-gray-color
+    display: none
+.faq__text
+    line-height: 1.3
+    margin-bottom: 15px
+    &:last-child
+        margin-bottom: 0

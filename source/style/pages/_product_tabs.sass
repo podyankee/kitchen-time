@@ -3,52 +3,57 @@
     position: relative
     align-items: center
     margin-bottom: 30px
+    &__item
+        position: relative
+        z-index: 1
+        padding: 0 15px
+        cursor: pointer
+        background-color: #fff
+        transition: all linear 0.2s
+        height: 40px
+        line-height: 40px
+        margin-right: 10px
+        &:last-child
+            margin-right: 0
+        &.active, &:hover
+            background-color: $light-gray-color
+        &.active
+            font-family: $bold-font
+            .tabs-list__text
+                border-bottom: 0
+    &__text
+        border-bottom: 1px dotted $menu-border-color
+        text-transform: uppercase
     &:before
         content: ''
         display: block
-        position: absolute
-        right: 0
-        left: 0
+        +abs-pos(auto, 0, auto, auto)
         top: 50%
         height: 1px
+        width: 35%
         margin-top: -0.5px
         background-color: $light-gray-color
         z-index: 0
-.tabs-list__item
-    position: relative
-    z-index: 1
-    height: 40px
-    line-height: 40px
-    padding: 0 15px
-    margin-right: 10px
-    cursor: pointer
-    background-color: #fff
-    transform: all linear 0.2s
-    &:last-child
-        margin-right: 0
-    &.active, &:hover
-        background-color: $light-gray-color
-    &.active
-        font-family: $bold-font
-        .tabs-list__text
-            border-bottom: 0
-.tabs-list__text
-    border-bottom: 1px solid $light-gray-color
-    text-transform: uppercase
-.tab-content__item
-    display: none
-    &.active
-        display: block
+
+
 .product-characteristics
     width: 100%
     border-collapse: collapse
     td
         padding: 15px
-        border: 0
         &:first-child
             width: 60%
     tr
         &:nth-child(odd)
             background-color: $light-gray-color
-.product-characteistic__key
-    color: $accent-color
+    &__key
+        color: $accent-color
+
+.tab-content__item
+    display: none
+    &.active
+        display: block
+
+@import "helpers/_tab_faq"
+@import "helpers/_tab_articles"
+              

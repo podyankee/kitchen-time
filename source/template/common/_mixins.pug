@@ -34,3 +34,14 @@ mixin shareLine(icon,link, title)
     .share-line
         +icon(icon)
         a(href= link)= title
+
+mixin tabsLink(dataShow, text)
+    li.tabs-list__item(show-tab= dataShow)&attributes(attributes)
+        span.tabs-list__text= text
+
+mixin charLine(key, val)
+    tr
+        td.product-characteristic__key
+            span= key
+        td.product-characteristic__key
+            span= val

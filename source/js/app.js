@@ -69,8 +69,25 @@ $('.js-product-gallery-nav').slick({
     
 });
 
+// Tabs
+
+$('.tabs-list__item').click(function () {
+    var tabName = $(this).attr('show-tab');
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.tabs-content .' + tabName).addClass('active').siblings().removeClass('active');
+    console.log('.tabs-content .' + tabName);
+});
 
 
+$(document).on('click', '.faq__title', function () {
+  $(this).parent().toggleClass('active');
+  var faqContent = $(this).siblings();
+  if(faqContent.is(':visible')) {
+      faqContent.slideUp();
+  } else {
+      faqContent.slideDown();
+  }
+});
 
     });
     
