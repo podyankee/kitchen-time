@@ -1,0 +1,51 @@
+section.filter-section
+    .container
+        h2.g-section-title Винные шкафы
+        .filter
+            .filter-count-res
+                span Выбрано 
+                span.count-res__number  250 шкафов
+            .filter-top
+                .filter-top__item
+                    span.filter-item__title Стоимость
+                    ul.filter-price__list
+                        +filterPriceLink('от 50 тыс. руб.')
+                        +filterPriceLink('от 500 тыс. руб.')
+                        +filterPriceLink('от 1 млн. руб.')
+                    input(type="range")
+                    .filter-price__text
+                        .filter-price__val
+                            span от
+                            input(type="text").filter-input
+                        .filter-price__val
+                            span до
+                            input(type="text").filter-input
+                        span грн.
+                .filter-top__item
+                    span.filter-item__title Цвет
+                    ul.filter-color__list
+                        +colorCheck('background-color: red')
+                        +colorCheck('background-color: blue')
+                        +colorCheck('background-color: fuchsia')
+                        +colorCheck('background-color: aqua')
+                        +colorCheck('background-color: lime')
+                        +colorCheck('background-color: purple')
+                        +colorCheck('background-color: olive')
+                        +colorCheck('background-color: lightpink')
+                        +colorCheck('background-color: cyan')
+                    label.checkbox Бесплатне подключение
+                        input(type="checkbox")
+                        span.checkbox-custom
+                            +icon('check')
+                .filter-top__item
+                    span.filter-item__title Бренды
+                    ul.filter-brands__list
+                        +brandsItem('Все бренды')
+                        +brandsItem('Все бренды')
+                        +brandsItem('Все бренды')
+                        +brandsItem('Все бренды')
+                        +brandsItem('Все бренды')
+                        +brandsItem('Все бренды')
+                        +brandsItem('Все бренды')
+                        +brandsItem('Все бренды')
+                        +brandsItem('Все бренды')

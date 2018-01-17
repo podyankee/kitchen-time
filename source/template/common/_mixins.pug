@@ -45,3 +45,26 @@ mixin charLine(key, val)
             span= key
         td.product-characteristic__key
             span= val
+mixin filterPriceLink(price)
+    li.filter--price__item
+        a(href="#").filter--price__link= price
+
+mixin colorCheck(bg)
+    li.filter-color__item
+        label.filter-color__check
+            input(type="checkbox")
+            .filter-color(style=bg)
+                .filter-color__icon
+                    +icon('check')
+
+mixin brandsItem(title)
+    li.filter-brands__item
+        label.checkbox
+            | #{title}
+            input(type="checkbox")
+            span.checkbox-custom
+                +icon('check')
+
+
+
+
