@@ -1,0 +1,75 @@
+.catalog-result
+    .icon
+        +dem(20px)
+.catalog-view
+    +row-flex
+    margin-bottom: 15px
+.catalog-view__item
+    +col
+    +size(3)
+    margin-bottom: 15px
+    .g-btn
+        &:hover
+            background-color: $black-color
+            color: #fff
+.catalog-view__img
+    position: relative
+    margin-bottom: 15px
+    .g-btn
+        opacity: 0
+        background-color: rgba(#fff, 0.7)
+        +abs-pos(auto, 0, 0, 0)
+    &:hover
+        .g-btn
+            opacity: 1
+
+
+.product-line-info__key
+    color: $accent-color
+
+.product-prev__line-prise
+    display: flex
+    justify-content: space-between
+    align-items: center
+    vertical-align: middle
+.product-availability
+    display: flex
+    span
+        margin-left: 10px
+
+// Catalog navigation
+.catalog-nav
+    display: block
+    text-align: center
+    position: relative
+.catalog-pag
+    display: flex
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+.catalog-pag__item
+    +dem(34px)
+    margin-left: 2px
+    &:first-child
+        margin-left: 0 
+    &.active
+        .catalog-pag__link
+            border-color: $black-color
+    
+.catalog-pag__link
+    display: block
+    position: relative
+    +dem(100%)
+    border: 2px solid transparent
+    background-color: $light-gray-color
+    &--arrows
+         background-color: $black-color
+    &.active
+        border-color: $black-color
+    .icon
+        fill: #fff
+        +absolute-center
+    span
+        +absolute-center
+    
