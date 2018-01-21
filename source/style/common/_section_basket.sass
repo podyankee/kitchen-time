@@ -1,0 +1,113 @@
+.basket-content
+    +row-flex
+.basket-main, .basket-aside
+    +col
+.basket-main
+    +size(9)
+.basket-aside
+    +size(3)
+.basket-table
+    border-collapse: collapse
+    margin-bottom: 20px
+    td, th
+        padding: 10px
+        border-bottom: 1px solid $filter-border-color
+        text-align-last: 
+    th
+        color: $accent-color
+        +rem(15px)
+    td
+        height: 120px
+    .basket-table__product
+        position: relative
+        padding-left: 120px
+    .basket-table__link
+        text-decoration: underline
+        line-height: 1.1
+    .basket-table__img
+        position: absolute
+        top: 50%
+        left: 10px
+        max-height: 80px
+        transform: translateY(-50%)
+    .basket-table__price, .basket-table__total
+        white-space: nowrap
+    .basket-table__total
+        font-family: $bold-font
+.basket-count
+    display: flex
+.basket-count__minus, .basket-count__plus
+    +dem(32px)
+    flex-shrink: 0
+    border: 2px solid $black-color
+    position: relative
+    span
+        +centered(both)
+        +rem(18px)
+        font-family: $bold-font
+        cursor: pointer
+.basket-count__current
+    .g-input
+        height: 32px
+        max-width: 45px
+        line-height: 32px
+        margin: 0 5px
+        color: $black-color
+        border: 1px solid $filter-border-color
+.basket-count__plus
+    background-color: $black-color
+    color: #fff
+.basket-table__remove
+    +rem(30px)
+    font-family: $bold-font
+    span
+        cursor: pointer
+.basket-delivery
+    background-color: $light-gray-color 
+    padding: 30px
+.basket-discount__line
+    display: flex
+    img
+        max-height: 75px
+.basket-discount__line--input
+    align-items: center
+    width: 100%
+    max-width: 380px
+    margin-bottom: 30px
+    .g-input
+        margin: 0 10px
+        background-color: #fff
+        border: 1px solid $filter-border-color
+.basket-discount
+    border-bottom: 1px solid $filter-border-color
+    padding-bottom: 30px
+    margin-bottom: 30px
+.basket-discount__number
+    margin: 0 30px 15px
+    span
+        display: block
+        white-space: nowrap
+        &:last-child
+            font-family: $bold-font
+.basket-discount__text
+    line-height: 1.3
+    width: 100%
+    max-width: 420px
+    a
+        border-bottom: 1px solid $filter-border-color
+        margin-left: 5px
+
+.basket-delivery-options
+    +row-flex
+    .g-form-block
+        margin-bottom: 15px
+        &:last-child 
+            margin-bottom: 0
+.basket-delivery__type, .basket-delivery__payment
+    +col
+    +size(6)
+.basket-delivery__title
+    display: block
+    margin-bottom: 25px
+    text-transform: uppercase
+    font-family: $bold-font

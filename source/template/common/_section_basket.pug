@@ -1,0 +1,104 @@
+section.basket
+    .container
+        h1.g-section-title Корзина
+        .basket-content
+            main.basket-main
+                table.basket-table
+                    thead
+                        tr
+                            each val in ['Товар', 'Цена', 'Количество', 'Сумма', '']
+                                th= val
+                    tbody
+                        tr
+                            td.basket-table__product
+                                img.basket-table__img(src="assets/img/content/product/catalog/product1/prev.jpg", alt="Продукт")
+                                a(href="product.html").basket-table__link Винный шкаф Liebherr WKEes SS3 GrandCru
+                            td.basket-table__price
+                                span 75 000 &#8372;
+                            td.bassket-price__count
+                                .basket-count
+                                    .basket-count__minus
+                                        span -
+                                    .basket-count__current
+                                        input(type="text" value="1").g-input
+                                    .basket-count__plus
+                                        span +
+                            td.basket-table__total
+                                span 75 000 &#8372;
+                            td.basket-table__remove
+                                span &times;
+                        tr
+                            td.basket-table__product
+                                img.basket-table__img(src="assets/img/products/product1/prev.jpeg", alt="Продукт")
+                                a(href="product.html").basket-table__link Набор бокалов для красного вина серия Frau, SHOTT ZWISSEL
+                            td.basket-table__price
+                                span 75 000 &#8372;
+                            td.bassket-price__count
+                                .basket-count
+                                    .basket-count__minus
+                                        span -
+                                    .basket-count__current
+                                        input(type="text" value="1").g-input
+                                    .basket-count__plus
+                                        span +
+                            td.basket-table__total
+                                span 75 000 &#8372;
+                            td.basket-table__remove
+                                span &times;
+                        tr
+                            td.basket-table__product
+                                img.basket-table__img(src="assets/img/products/product2/prev.jpeg", alt="Продукт")
+                                a(href="product.html").basket-table__link Набор чайный "Ричоло" Chinelly
+                            td.basket-table__price
+                                span 75 000 &#8372;
+                            td.bassket-price__count
+                                .basket-count
+                                    .basket-count__minus
+                                        span -
+                                    .basket-count__current
+                                        input(type="text" value="1").g-input
+                                    .basket-count__plus
+                                        span +
+                            td.basket-table__total
+                                span 75 000 &#8372;
+                            td.basket-table__remove
+                                span &times;
+                .basket-delivery
+                    .basket-discount
+                        .basket-discount__line.basket-discount__line--input
+                            span Клубная карта
+                            input(type="text").g-input
+                            span Успешно
+                        .basket-discount__line
+                            img(src="assets/img/content/articles/article1/prev.jpg", alt="loyality card").basket-discount__img
+                            .basket-discount__number
+                                span Клубная карта
+                                span 556787
+                            p.basket-discount__text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                                a(href="#") в личном кабинете
+                                a(href="#") О программе лояльности
+                    .basket-delivery-options
+                        .basket-delivery__type
+                            span.basket-delivery__title Доставка
+                            .g-form-block
+                                label.g-label.g-label--accent Город
+                                select.g-select
+                                    option Лондон
+                                    option Нью-Йорк
+                                    option Париж
+                            .g-form-block
+                                label.g-label.g-label--accent Способ доставки
+                                select.g-select
+                                    option Курьером
+                                    option Почтой
+                                    option Курьерской службы
+                        .basket-delivery__payment
+                            span.basket-delivery__title Оплата
+                            .g-form-block
+                                label.g-label.g-label--accent Способ оплаты
+                                select.g-select
+                                    option Наличными
+                                    option Картой
+                                    option Электронные деньги
+                            
+            aside.basket-aside

@@ -50,7 +50,7 @@
         },
         "basket" : {
             "title": "Корзина",
-            "link": "#", 
+            "link": "basket.html", 
             "icon": "basket1",
             "number": "23"
 

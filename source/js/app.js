@@ -35,6 +35,20 @@ $(document).ready(function(){
 
     });
 
+// Catalog-view slider
+
+$('.js-catalog-view__slider').slick({
+    lazyLoad: 'ondemand', 
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    customPaging: function (slider, i)  {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<a><img src="'+thumb+'"></a>';
+    }
+});
+
 // Video
 
     $('.video-start').click(function () {

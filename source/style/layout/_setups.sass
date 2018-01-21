@@ -84,12 +84,18 @@ a
   line-height: 50px
   padding: 0 15px
   background-color: transparent
-  border: 1px solid #fff
-  color: #fff
+  &.g-input--white
+    border: 1px solid #fff
+    color: #fff
   &:focus
     outline: none
 .g-label
-  color: #fff
+  display: block
+  margin-bottom: 5px
+  &.g-label--white
+    color: #fff
+  &.g-label--accent
+    color: $accent-color
 .product-buttons
   display: flex
   justify-content: space-between
